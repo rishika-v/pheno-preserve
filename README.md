@@ -31,13 +31,13 @@ You can install these dependencies via pip:
 To use PhenoPreserve, you must have the data files in the correct format (.mtx for matrices, .tsv for gene names and metadata). 
 The usage function in the script provides instructions on how to run the script with required command-line options. Each option corresponds to a different input file needed for the analysis:
 
--m: Specifies the path to the Human Matrix file (.mtx format).
--t: Specifies the path to the Mouse Matrix file (.mtx format).
--g: Specifies the path to the Human Gene Names file (.tsv.gz format).
--n: Specifies the path to the Mouse Gene Names file (.tsv.gz format).
--d: Specifies the path to the Human Metadata file (.tsv format).
--s: Specifies the path to the Mouse Metadata file (.tsv format).
--h: Displays the usage information and exits the script.
+-m: Specifies the path to the Species 1 Matrix file (.mtx format). <br />
+-t: Specifies the path to the Species 2 Matrix file (.mtx format). <br />
+-g: Specifies the path to the Species 1 Gene Names file (.tsv.gz format).<br />
+-n: Specifies the path to the Species 2 Gene Names file (.tsv.gz format).<br />
+-d: Specifies the path to the Species 1 Metadata file (.tsv format).<br />
+-s: Specifies the path to the Species 2 Metadata file (.tsv format).<br />
+-h: Displays the usage information and exits the script.<br />
 
 `chmod +x run_analysis.sh`
 
