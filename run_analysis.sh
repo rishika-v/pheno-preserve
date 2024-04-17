@@ -5,7 +5,7 @@
 # source activate your_conda_environment
 
 # Run Python scripts
-echo "Welcome to the scRNA-seq Analysis Tool"
+echo "phenopreserve: scRNA-seq Analysis Tool"
 
 # Function to prompt for file input
 prompt_for_file() {
@@ -28,10 +28,17 @@ mouse_genes=$(prompt_for_file "Mouse Gene Names (.tsv.gz)")
 human_metadata=$(prompt_for_file "Human Metadata (.tsv)")
 mouse_metadata=$(prompt_for_file "Mouse Metadata (.tsv)")
 
-# Run Python scripts
+# Run data preparation Python script
 echo "Running data preparation..."
-python prep_data.py $human_matrix $mouse_matrix $human_genes $mouse_genes $human_metadata $
+python prep_data.py $human_matrix $mouse_matrix $human_genes $mouse_genes $human_metadata $mouse_metadata
 
-
+# Check if the preparation was successful and files were created
+if [[ -f "X_mouse.csv" && -f "y_mouse.csv" && -f "y_class.csv" ]]; then
+    echo "Data prepared successfully. Proceeding with training and evaluation."
+    # Run training and evaluation Python script
+    python train_evaluate.py X_mouse.csv y_mouse.csv y_class.csv
+else
+    echo "Data preparation did not complete successfully. Please check the logs for errors."
+fi
 
 echo "Analysis complete. Check output files for results."
