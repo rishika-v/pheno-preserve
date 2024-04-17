@@ -24,18 +24,24 @@ scanpy
 ```
 
 You can install these dependencies via pip:
+
 `pip install numpy pandas scikit-learn imbalanced-learn matplotlib seaborn scanpy`
 
 ## Usage
 To use PhenoPreserve, you must have the data files in the correct format (.mtx for matrices, .tsv for gene names and metadata). 
+The usage function in the script provides instructions on how to run the script with required command-line options. Each option corresponds to a different input file needed for the analysis:
+
+-m: Specifies the path to the Human Matrix file (.mtx format).
+-t: Specifies the path to the Mouse Matrix file (.mtx format).
+-g: Specifies the path to the Human Gene Names file (.tsv.gz format).
+-n: Specifies the path to the Mouse Gene Names file (.tsv.gz format).
+-d: Specifies the path to the Human Metadata file (.tsv format).
+-s: Specifies the path to the Mouse Metadata file (.tsv format).
+-h: Displays the usage information and exits the script.
 
 `chmod +x run_analysis.sh`
 
-`./run_analysis.sh`
-
-You will be prompted to enter paths to your data files:
-
-Species 1 Matrix (.mtx); Species 2 Matrix (.mtx), Species 1 Gene Names (.tsv.gz), Species 2 Gene Names (.tsv.gz), Species 1 Metadata (.tsv), Species 2 Metadata (.tsv)
+`./run_analysis.sh -m /path/to/sp1_matrix.mtx -t /path/to/sp2_matrix.mtx -g /path/to/sp1_genes.tsv.gz -n /path/to/sp2_genes.tsv.gz -d /path/to/sp1_metadata.tsv -s /path/to/sp2_metadata.tsv`
 
 ### Review Results: 
 After the script completes, check the output files and logs for detailed results and any potential errors.
