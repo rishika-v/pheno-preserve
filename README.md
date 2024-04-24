@@ -1,7 +1,7 @@
 # phenopreserve
 ## FCBB Final Project:
 
-PhenoPreserve is a tool designed to facilitate the prediction of the translational value of preclinical models based on preservation of immune cell phenotypes across different species (e.g., human and mouse). It integrates both classification and regression models to evaluate and predict phenotypic consistency using scRNA-seq data.
+PhenoPreserve is a tool designed to facilitate the prediction of the translational value of preclinical models based on preservation of immune cell phenotypes across different species (e.g., human and mouse). It integrates expression data preprocessing with classification models to predict phenotypic consistency using scRNA-seq data.
 
 ## Features
 ### Data Preparation: 
