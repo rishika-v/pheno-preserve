@@ -31,17 +31,17 @@ You can install these dependencies via pip:
 To use PhenoPreserve, you must have the data files in the correct format (.mtx for matrices, .tsv for gene names and metadata). 
 The usage function in the script provides instructions on how to run the script with required command-line options. Each option corresponds to a different input file needed for the analysis:
 
--m: Specifies the path to the Species 1 Matrix file (.mtx format). <br />
--t: Specifies the path to the Species 2 Matrix file (.mtx format). <br />
--g: Specifies the path to the Species 1 Gene Names file (.tsv.gz format).<br />
--n: Specifies the path to the Species 2 Gene Names file (.tsv.gz format).<br />
--d: Specifies the path to the Species 1 Metadata file (.tsv format).<br />
--s: Specifies the path to the Species 2 Metadata file (.tsv format).<br />
--h: Displays the usage information and exits the script.<br />
+-m: Species 1 Matrix file (.mtx format). <br />
+-t: Species 2 Matrix file (.mtx format). <br />
+-g: Species 1 Gene Names file (.tsv.gz format).<br />
+-n: Species 2 Gene Names file (.tsv.gz format).<br />
+-d: Species 1 Metadata file (.tsv format).<br />
+-s: Species 2 Metadata file (.tsv format).<br />
+-h: Displays how to use phenopreserve.<br />
 
 `chmod +x run_analysis.sh`
 
-`./run_analysis.sh -m /path/to/sp1_matrix.mtx -t /path/to/sp2_matrix.mtx -g /path/to/sp1_genes.tsv.gz -n /path/to/sp2_genes.tsv.gz -d /path/to/sp1_metadata.tsv -s /path/to/sp2_metadata.tsv`
+`./run_analysis.sh -m species1_matrix.mtx -t species2_matrix.mtx -g species1_genes.tsv.gz -n species2_genes.tsv.gz -d species1_metadata.tsv -s species2_metadata.tsv`
 
 ### Review Results: 
 After the script completes, check the output files and logs for detailed results and any potential errors.
