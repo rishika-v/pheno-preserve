@@ -1,9 +1,6 @@
 #!/bin/bash
 # run_analysis.sh
 
-# Activate environment if needed
-# source activate your_conda_environment
-
 # Run Python scripts
 echo "phenopreserve: scRNA-seq Analysis Tool"
 
